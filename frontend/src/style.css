@@ -1,0 +1,719 @@
+/* This ensures the quiz area uses your theme variables */
+#quiz-container {
+    
+    background-color: var(--section-bg);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #444; /* Subtle border for dark mode */
+    
+}
+
+.option {
+    background-color: var(--bg-color); /* Matches the main background */
+    color: black;           /* Swaps white/black text */
+    padding: 12px;
+    margin: 8px 0;  
+    border: 1px solid var(--text-color); 
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Hover effect and Selected state */
+.option:hover {
+    background-color: #e67e22; /* Basketball orange */
+    color: white;
+}
+
+.option.selected {
+    background-color: #ff6600 !important;
+    color: white !important;
+    border-color: #fff;
+}/* Styles */
+:root {
+    --primary-orange: #ff6600;
+    --dark-grey: #333;
+    --light-grey: #f4f4f4;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    color: var(--dark-grey);
+    background-color: var(--light-grey);
+}
+
+/* Header & Nav */
+header {
+    background: var(--dark-grey);
+    color: var(--white);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, .active {
+    color: var(--primary-orange);
+    border-bottom: 2px solid var(--primary-orange);
+}
+
+/* Layout */
+.hero {
+    background: var(--white);
+    padding: 40px;
+    text-align: center;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.previews {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.card {
+    background: var(--white);
+    padding: 20px;
+    width: 40%;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .previews {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background:#e67e22;
+    color: var(--white);
+    margin-top: 20px;
+}
+#result{
+    color: white;
+}
+/* About Page Specifics */
+.about-section {
+    margin-bottom: 40px;
+}
+
+.content-img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    border-left: 5px solid var(--primary-orange);
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: #fff5ed;
+}
+
+blockquote cite {
+    display: block;
+    font-size: 1rem;
+    color: var(--dark-grey);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.timeline {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.05);
+}
+
+.timeline li {
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+/* Table Styles */
+.resource-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: var(--white);
+}
+
+.resource-table th, .resource-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.resource-table th {
+    background-color: var(--primary-orange);
+    color: white;
+}
+
+.resource-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Map Styling */
+.map-container {
+    margin-top: 20px;
+    border: 3px solid var(--dark-grey);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+/* Form Styling */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], 
+input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+fieldset {
+    border: 1px solid var(--primary-orange);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.submit-btn {
+    background-color: var(--primary-orange);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #e65c00;
+}
+
+.decorative-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+header {
+    position: relative; /* This allows us to anchor the button inside the header */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Keeps your title and nav centered */
+}
+
+.theme-btn-top {
+    position: absolute; /* The "Magic" part */
+    top: 20px;          /* Distance from the top */
+    right: 20px;        /* Distance from the right */
+    
+    padding: 8px 15px;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    z-index: 1000;      /* Ensures it stays on top of images */
+    transition: transform 0.2s ease;
+}
+
+.theme-btn-top:hover {
+    transform: scale(1.05); /* Slight "pop" when hovering */
+}
+
+/* Mobile Adjustment: Move it down slightly if it overlaps on small screens */
+@media (max-width: 600px) {
+    .theme-btn-top {
+        top: 10px;
+        right: 10px;
+        font-size: 0.8rem;
+    }
+}
+/* Position the whole container top-right */
+.switch-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#mode-label {
+    font-size: 1.2rem;
+}
+
+/* Position the whole container top-right */
+.switch-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#mode-label {
+    font-size: 1.2rem;
+}
+
+/* The Switch Box */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+
+/* Hide the default checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The Slider Track */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+/* The Round Knob */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+/* Colors when ON (Dark Mode) */
+input:checked + .slider {
+    background-color: #ff6b00; /* Basketball Orange */
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+/* Define Light Mode colors as defaults */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --header-bg: #f8f9fa;
+    --accent-color: #e67e22; /* Basketball Orange */
+}
+
+/* Define Dark Mode colors */
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #f4f4f4;
+    --header-bg: #111111;
+    --accent-color: #ff9f43;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.3s; /* Smooth transition when switching */
+}
+
+/* The Slider Styling */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.theme-switch input { display: none; }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px; width: 18px;
+    left: 4px; bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider { background-color: var(--accent-color); }
+input:checked + .slider:before { transform: translateX(26px); }
+/* LIGHT MODE (Default) */
+:root {
+    --bg-color: #ffffff;      /* White background */
+    --text-color: #1a1a1a;    /* Dark gray text */
+    --link-color: #e67e22;    /* Basketball orange */
+}
+
+/* DARK MODE */
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;      /* Dark background */
+    --text-color: #f4f4f4;    /* Light gray text */
+    --link-color: #ffcc00;    /* Brighter yellow/orange for visibility */
+}
+
+/* APPLY TO ELEMENTS */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color); /* This ensures text changes! */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Headers and Paragraphs will now inherit the correct color */
+h1, h2, h3, p, li {
+    color: var(--text-color);
+}
+
+a {
+    color: var(--link-color);
+}
+header {
+    position: relative; /* This is the anchor for the button */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--header-bg);
+}
+
+/* Positioning the Toggle to the Upper Right */
+.theme-switch-wrapper {
+    position: absolute;
+    top: 20px;   /* Distance from the top */
+    right: 30px; /* Distance from the right edge */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#mode-text {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--text-color); /* Ensures label is visible in both modes */
+}
+
+/* The actual slider button styling */
+.theme-switch {
+    display: inline-block;
+    height: 26px;
+    position: relative;
+    width: 50px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 18px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 18px;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #e67e22; /* Basketball Orange */
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+/* This targets the white box in your screenshot */
+.container, .hero-content, .highlights, .previews {
+    background-color: var(--container-bg);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Update your variable list */
+:root {
+    --bg-color: #f4f4f4;
+    --container-bg: #ffffff; /* White in Light Mode */
+    --text-color: #333333;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --container-bg: #1e1e1e; /* Dark gray in Dark Mode */
+    --text-color: #ffffff;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 20px auto;
+}
+/* Update your variables if you haven't already */
+:root {
+    --bg-color: #ffffff;
+    --header-bg: #f8f8f8; /* Light gray for the header area */
+    --text-color: #1a1a1a; /* Dark text for Light Mode */
+    --accent-color: #e67e22; /* Basketball Orange */
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --header-bg: #1a1a1a; /* Darker header for Dark Mode */
+    --text-color: #ffffff; /* White text for Dark Mode */
+    --accent-color: #ff9f43;
+}
+
+/* Apply variables to the Nav Links */
+nav ul li a {
+    color: var(--text-color); /* This makes them visible in both modes! */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Ensure the 'active' link stays visible and orange */
+nav ul li a.active {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* Hover effect for better UX */
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+header {
+    background-color: var(--header-bg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Ensure the Site Title (H1) also changes */
+header h1 {
+    color: var(--text-color);
+}/* LIGHT MODE (White & Orange) */
+:root {
+    --bg-color: #ffffff;           /* Pure white background */
+    --header-bg: #fdfdfd;          /* Off-white for header */
+    --container-bg: #ffffff;       /* Content box background */
+    --text-color: #222222;         /* Dark gray/black for readability */
+    --accent-color: #e67e22;       /* Basketball Orange */
+    --nav-text: #333333;           /* Dark text for links */
+}
+
+/* DARK MODE */
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --header-bg: #1a1a1a;
+    --container-bg: #1e1e1e;
+    --text-color: #ffffff;
+    --accent-color: #ff9f43;       /* Lighter orange for dark mode */
+    --nav-text: #ffffff;
+}
+/* General Body and Container Settings */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+header h1 {
+    color: var(--text-color);
+}
+
+/* Navigation Links Visibility */
+nav ul li a {
+    color: var(--nav-text); /* Uses the dark color in light mode */
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 10px;
+}
+
+/* Active Page & Hover - The Orange Highlight */
+nav ul li a.active, 
+nav ul li a:hover {
+    color: var(--accent-color) !important;
+}
+
+/* The White Box from your screenshot */
+.hero, .container {
+    background-color: var(--container-bg);
+    color: var(--text-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Adds a subtle shadow to the white box */
+}
+#mode-text {
+    color: var(--text-color); /* Automatically flips between black and white */
+    font-weight: bold;
+}
+/* LIGHT MODE - White & Orange */
+:root {
+    --bg-color: #ffffff;        /* Main background */
+    --header-bg: #ffffff;      /* Header background */
+    --container-bg: #ffffff;   /* The white box in your screenshot */
+    --text-color: #222222;     /* Dark text for visibility */
+    --accent-color: #e67e22;   /* Basketball Orange */
+    --nav-link: #333333;       /* Link color */
+}
+
+/* DARK MODE */
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --header-bg: #1a1a1a;
+    --container-bg: #1e1e1e;
+    --text-color: #ffffff;
+    --accent-color: #ff9f43;
+    --nav-link: #ffffff;
+}
+
+/* Applying the variables */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.3s ease;
+}
+
+header {
+    background-color: var(--header-bg);
+    border-bottom: 2px solid var(--accent-color); /* Orange line under header */
+}
+
+nav ul li a {
+    color: var(--nav-link);
+}
+.option {
+    background: #f0f0f0;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.option.selected {
+    background-color: #3498db;
+    color: black;
+}
+
+#submitBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+nav ul li a.active {
+    color: var(--accent-color);
+}
+
