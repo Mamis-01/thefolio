@@ -12,8 +12,14 @@ const adminRoutes = require('./routes/admin.routes');
 const app = express();
 connectDB(); // Connect to MongoDB
 // ── Middleware ─────────────────────────────────────────────────
-// Allow React (port 3000) to call this server
-app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
+// Allow React (port 3000) and Vercel frontend to call this server
+app.use(cors({
+	origin: [
+		'http://localhost:3000',
+		'https://thefolio-mocha.vercel.app/', // ← your Vercel URL
+	],
+	credentials: true,
+}));
 // Parse incoming JSON request bodies
 app.use(express.json());
 // Serve uploaded image files as public URLs
