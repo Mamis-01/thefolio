@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import API from '../api/axios';
+import API, { BACKEND_URL } from '../api/axios';
 
 export default function Home() {
     const [posts, setPosts] = useState([]);
@@ -68,7 +68,7 @@ export default function Home() {
                         {posts.map(post => (
                             <div key={post._id} className="post-card">
                                 {post.image && (
-                                    <img src={`http://localhost:5000/uploads/${post.image}`} alt={post.title} />
+                                    <img src={`${BACKEND_URL}/uploads/${post.image}`} alt={post.title} />
                                 )}
                                 <h3>{post.title}</h3>
                                 <p className="post-author">By {post.author?.name}</p>

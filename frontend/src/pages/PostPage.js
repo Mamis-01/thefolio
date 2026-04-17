@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import API from '../api/axios';
+import API, { BACKEND_URL } from '../api/axios';
 
 const PostPage = () => {
   const { id } = useParams();
@@ -98,7 +98,7 @@ const PostPage = () => {
 
       {post.image && (
         <div className='post-image'>
-          <img src={`http://localhost:5000/uploads/${post.image}`} alt={post.title} />
+          <img src={`${BACKEND_URL}/uploads/${post.image}`} alt={post.title} />
         </div>
       )}
 

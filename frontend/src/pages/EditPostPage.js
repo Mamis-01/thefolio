@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import API from '../api/axios';
+import API, { BACKEND_URL } from '../api/axios';
 
 const EditPostPage = () => {
   const { id } = useParams();
@@ -84,7 +84,7 @@ const EditPostPage = () => {
           {currentImage && (
             <div className='current-image'>
               <p>Current image:</p>
-              <img src={`http://localhost:5000/uploads/${currentImage}`} alt='Current cover' className='preview-image' />
+              <img src={`${BACKEND_URL}/uploads/${currentImage}`} alt='Current cover' className='preview-image' />
             </div>
           )}
           <input

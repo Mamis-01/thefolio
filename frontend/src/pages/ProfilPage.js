@@ -1,7 +1,7 @@
 // frontend/src/pages/ProfilPage.js
 import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
-import API from '../api/axios';
+import API, { BACKEND_URL } from '../api/axios';
 
 const ProfilePage = () => {
   const { user, setUser } = useAuth();
@@ -77,7 +77,7 @@ const ProfilePage = () => {
             <label>Profile Picture:</label>
             {user?.profilePic && (
               <div className='profile-pic-preview'>
-                <img src={`http://localhost:5000/uploads/${user.profilePic}`} alt='Profile' />
+                <img src={`${BACKEND_URL}/uploads/${user.profilePic}`} alt='Profile' />
               </div>
             )}
             <input
